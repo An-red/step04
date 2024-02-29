@@ -1,0 +1,222 @@
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background-image: url(../img/1675484315.jpg);
+    background-position: center;
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+.startGame{
+    width: 200px;
+    height: 40px;
+    font-size: 25px;
+    background-color: #55bbc43d;
+    position: absolute;
+    border: 1px solid #55BAC4;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #8AB7A2;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 5px #55BAC4;
+    animation-name: start;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transition: 0.2s linear;
+}
+
+@keyframes start {
+    0%{
+        box-shadow: 0 0 20px 1px #55BAC4;
+    }
+    50%{
+        box-shadow: 0 0 20px 2px #55bbc485;
+    }
+    100%{
+        box-shadow: 0 0 20px 1px #55bbc431;
+    }
+}
+
+.startGame:active{
+    background-color: #55bbc4;
+    color: #fff;
+    width: 180px;
+    height: 38px;
+    font-size: 15px;
+}
+.startGame:hover{
+    background-color: #55bbc4;
+    color: #fff;
+}
+
+.startGameTransparent{
+    display: none;
+}
+
+/*** Блок поздравления и отчет по игре */
+.victory{
+    position: absolute;
+    background-color: #55bbc43d;
+    border: 1px solid #55BAC4;
+    border-radius: 25px;
+    width: 500px;
+    height: 250px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.congratulation{
+    color: #55BAC4;
+    font-size: 30px;
+    animation-name: great;
+}
+
+.finishGame{
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    background-color: #d2d6d63d;
+    border: 1px solid #55BAC4;
+    border-radius: 10px;
+    animation-name: end;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transition: 0.2s linear;
+    color: #d2dbd7;
+}
+
+@keyframes end {
+    0%{
+        box-shadow: 0 0 20px 1px #55BAC4;
+    }
+    50%{
+        box-shadow: 0 0 20px 2px #55bbc485;
+    }
+    100%{
+        box-shadow: 0 0 20px 1px #55bbc431;
+    }
+}
+.report{
+    color: #add4d8;
+}
+
+
+.motionTable{
+    padding: 5px;
+    margin: 0 auto;
+    width: 200px;
+    height: 50px;
+    background-color: #55bbc43d;
+    border-radius: 10px;
+    border: 1px solid #55BAC4;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    display: none;
+}
+.motionVisible{
+    display: flex;
+}
+
+.motionCounter{
+    color: #fff;
+    font-size: 20px;
+}
+
+.memory-game{
+    margin: 0 auto;
+    background-color: rgba(179, 100, 100, 0);
+    width: 950px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    perspective: 1000px;
+    position: relative;
+    z-index: 4;
+}
+
+
+.memory-card{
+    width: 100px;
+    height: 150px;
+    margin: 5px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.memory-card.flip{
+    transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+width: 100%;
+height: 100%;
+position: absolute;
+backface-visibility: hidden;
+
+}
+
+.front-face{
+    transform: rotateY(180deg);
+}
+
+.transparent{
+    visibility: hidden;
+    /* animation-name: anim;
+    animation-duration: 4s;
+    animation-direction: normal; */
+}
+
+/* @keyframes anim {
+    0%{
+        transform: scale(1.1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1.3);
+    }
+} */
+
+.inviz{
+    display: none;
+}
+
+.test{
+    display: none;
+}
+
+
+
+
